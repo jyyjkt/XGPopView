@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "XGPopView.h"
+#import <objc/runtime.h>
 
-@interface ViewController ()
+@interface ViewController ()<XGPopVeiwDelegate>
+
+@property (weak, nonatomic) IBOutlet UIButton *showButton;
+- (IBAction)buttonAction:(id)sender;
 
 @end
 
@@ -16,7 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    
 }
 
 
@@ -25,5 +31,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)buttonAction:(id)sender {
+    
+    XGPopView * popView = [XGPopView showPopViewAddedTo:self.view animationStr:@"GraduallyShowAnimation" alertViewStr:@"XGTextAlertView"];
+    popView.delegate = self;
+    [popView showAnimated];
+    
+}
+
+- (void)showAnimationFinishedForView:(XGPopView *)popView{
+   
+    NSLog(@"显示动画结束--------");
+}
+
+- (void)hiddenAnimationFinshedForView:(XGPopView *)popView{
+     NSLog(@"隐藏动画结束--------");
+}
 
 @end
