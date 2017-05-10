@@ -136,10 +136,16 @@
     
     if (self.animation != nil && self != nil) {
         
-        [self.animation showAnimationForView:self];
-        if (_delegate && [_delegate respondsToSelector:@selector(showAnimationFinishedForView:)]) {
-            [_delegate showAnimationFinishedForView:self];
-        }
+        __weak __typeof(self)weakSelf = self;
+        [self.animation showAnimationForView:self animateFinished:^(BOOL    isFinished) {
+            
+            if (weakSelf.delegate
+                && [weakSelf.delegate respondsToSelector:@selector(showAnimationFinishedForView:)]
+                && isFinished) {
+                [weakSelf.delegate showAnimationFinishedForView:self];
+            }
+            
+        }];
     }else{
         return;
     }
@@ -149,11 +155,16 @@
 - (void)hideAnimated{
     
     if (self.animation != nil && self != nil) {
-        [self.animation hiddenAnimationForView:self];
-        if (_delegate && [_delegate respondsToSelector:@selector(hiddenAnimationFinshedForView:)]) {
-            [_delegate hiddenAnimationFinshedForView:self];
-            [self removeFromSuperview];
-        }
+        __weak __typeof(self)weakSelf = self;
+        [self.animation hiddenAnimationForView:self animateFinished:^(BOOL isFinished) {
+            
+            if (weakSelf.delegate
+                && [weakSelf.delegate respondsToSelector:@selector(hiddenAnimationFinshed)]
+                && isFinished) {
+                [weakSelf.delegate hiddenAnimationFinshed];
+            }
+            
+        }];
     }else{
         return;
     }
@@ -161,9 +172,21 @@
 
 #pragma mark - 属性
 
+- (void)setAnimation:(XGAlertAnimation *)animation{
+    
+    _animation = animation;
+    
+}
 
+- (void)setAlertView:(XGAlertView *)alertView{
+    
+}
 
 #pragma mark - Delegate
+
+/**
+ *  UIGestureRecognizerDelegate
+ */
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     
     /* 将子视图的tap手势屏蔽 */

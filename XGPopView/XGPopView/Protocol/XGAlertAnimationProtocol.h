@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 @class XGPopView;
 @class XGAlertView;
 
@@ -18,14 +19,14 @@
 #define OPacity @"opacity"
 
 #pragma mark - 动画协议
+typedef void (^XGAnimationFinished)(BOOL isFinished);
+
 @protocol XGAlertAnimationProtocol <NSObject>
 @optional
 /** 显示动画 */
-- (void)showAnimationForView:(UIView *)view;
-
+- (void)showAnimationForView:(XGPopView *)view animateFinished:(XGAnimationFinished)animateFinished;
 /** 隐藏动画 */
-- (void)hiddenAnimationForView:(UIView *)view;
-
+- (void)hiddenAnimationForView:(XGPopView *)view animateFinished:(XGAnimationFinished)animateFinished;
 @end
 
 #pragma mark - 动画

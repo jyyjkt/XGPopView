@@ -6,8 +6,10 @@
 //  Copyright © 2017年 xiaoguo. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "XGAlertAnimationProtocol.h"
+
 @class XGPopView;
 
 @protocol XGPopVeiwDelegate <NSObject>
@@ -15,7 +17,7 @@
 
 - (void)showAnimationFinishedForView:(XGPopView *)popView;
 
-- (void)hiddenAnimationFinshedForView:(XGPopView *)popView;
+- (void)hiddenAnimationFinshed;
 
 @end
 
@@ -29,7 +31,7 @@
 
 + (XGPopView *)FindPopViewForView:(UIView *)view;
 
-- (id)initWithView:(UIView *)view animationStr:(NSString *)animationStr alertView:(NSString *)alertView;
+- (id)initWithView:(UIView *)view animationStr:(NSString *)animationStr alertViewStr:(NSString *)alertViewStr;
 
 - (id)initWithView:(UIView *)view;
 

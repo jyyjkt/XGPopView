@@ -6,6 +6,9 @@
 //  Copyright © 2017年 xiaoguo. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "XGPopView.h"
 #import "XGAlertAnimationProtocol.h"
 
 @interface GraduallyShowAnimation : XGAlertAnimation

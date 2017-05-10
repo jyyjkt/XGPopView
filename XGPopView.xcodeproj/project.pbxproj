@@ -19,8 +19,8 @@
 		2E278CC71EB9D017001A6402 /* XGAlertAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278CC61EB9D017001A6402 /* XGAlertAnimationProtocol.m */; };
 		2E3315D51EC022F70030CC41 /* GraduallyShowAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3315D41EC022F70030CC41 /* GraduallyShowAnimation.m */; };
 		2E3315D81EC061CB0030CC41 /* XGTextAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3315D71EC061CB0030CC41 /* XGTextAlertView.m */; };
-		2E3315E21EC174DF0030CC41 /* FirstShowAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3315E11EC174DF0030CC41 /* FirstShowAnimation.m */; };
 		2E3315E51EC194680030CC41 /* XGTabelAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3315E41EC194680030CC41 /* XGTabelAlertView.m */; };
+		2E3CEF971EC2FCDB0089BBD7 /* TestShowAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CEF961EC2FCDB0089BBD7 /* TestShowAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +65,10 @@
 		2E3315D41EC022F70030CC41 /* GraduallyShowAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduallyShowAnimation.m; sourceTree = "<group>"; };
 		2E3315D61EC061CB0030CC41 /* XGTextAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGTextAlertView.h; sourceTree = "<group>"; };
 		2E3315D71EC061CB0030CC41 /* XGTextAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGTextAlertView.m; sourceTree = "<group>"; };
-		2E3315E01EC174DF0030CC41 /* FirstShowAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstShowAnimation.h; sourceTree = "<group>"; };
-		2E3315E11EC174DF0030CC41 /* FirstShowAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstShowAnimation.m; sourceTree = "<group>"; };
 		2E3315E31EC194680030CC41 /* XGTabelAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGTabelAlertView.h; sourceTree = "<group>"; };
 		2E3315E41EC194680030CC41 /* XGTabelAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGTabelAlertView.m; sourceTree = "<group>"; };
+		2E3CEF951EC2FCDB0089BBD7 /* TestShowAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestShowAnimation.h; sourceTree = "<group>"; };
+		2E3CEF961EC2FCDB0089BBD7 /* TestShowAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestShowAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				2E3315D21EC022750030CC41 /* GraduallyShowAnimation */,
-				2E3315DF1EC174DF0030CC41 /* FirstShowAnimation */,
+				2E3CEF941EC2FC9A0089BBD7 /* TestShowAnimation */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -209,13 +209,13 @@
 			path = GraduallyShowAnimation;
 			sourceTree = "<group>";
 		};
-		2E3315DF1EC174DF0030CC41 /* FirstShowAnimation */ = {
+		2E3CEF941EC2FC9A0089BBD7 /* TestShowAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				2E3315E01EC174DF0030CC41 /* FirstShowAnimation.h */,
-				2E3315E11EC174DF0030CC41 /* FirstShowAnimation.m */,
+				2E3CEF951EC2FCDB0089BBD7 /* TestShowAnimation.h */,
+				2E3CEF961EC2FCDB0089BBD7 /* TestShowAnimation.m */,
 			);
-			path = FirstShowAnimation;
+			path = TestShowAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,12 +353,12 @@
 			files = (
 				2E278C901EB9B384001A6402 /* ViewController.m in Sources */,
 				2E278C8D1EB9B384001A6402 /* AppDelegate.m in Sources */,
-				2E3315E21EC174DF0030CC41 /* FirstShowAnimation.m in Sources */,
 				2E278C8A1EB9B384001A6402 /* main.m in Sources */,
 				2E3315D81EC061CB0030CC41 /* XGTextAlertView.m in Sources */,
 				2E3315D51EC022F70030CC41 /* GraduallyShowAnimation.m in Sources */,
 				2E3315E51EC194680030CC41 /* XGTabelAlertView.m in Sources */,
 				2E278CBE1EB9B7AA001A6402 /* XGPopView.m in Sources */,
+				2E3CEF971EC2FCDB0089BBD7 /* TestShowAnimation.m in Sources */,
 				2E278CC71EB9D017001A6402 /* XGAlertAnimationProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

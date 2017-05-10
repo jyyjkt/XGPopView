@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        self.frame = CGRectMake(self.bounds.size.width/2, self.bounds.size.height/2, 300, 300);
+        self.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 150, [UIScreen mainScreen].bounds.size.height/2 - 150, 300, 300);
         [self setBackgroundColor:[UIColor yellowColor]];
     }
     return self;

@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "XGPopView.h"
 #import <objc/runtime.h>
+#import "TestShowAnimation.h"
+#import "XGTabelAlertView.h"
 
 @interface ViewController ()<XGPopVeiwDelegate>
 
@@ -36,6 +38,8 @@
     
     XGPopView * popView = [XGPopView showPopViewAddedTo:self.view animationStr:@"GraduallyShowAnimation" alertViewStr:@"XGTextAlertView"];
     popView.delegate = self;
+    popView.animation = [TestShowAnimation new];
+    popView.alertView = [XGTabelAlertView new];
     [popView showAnimated];
     
 }
@@ -45,7 +49,7 @@
     NSLog(@"显示动画结束--------");
 }
 
-- (void)hiddenAnimationFinshedForView:(XGPopView *)popView{
+- (void)hiddenAnimationFinshed{
      NSLog(@"隐藏动画结束--------");
 }
 
