@@ -285,6 +285,7 @@
 				TargetAttributes = {
 					2E278C841EB9B384001A6402 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = R3HARN7J9X;
 						ProvisioningStyle = Automatic;
 					};
 					2E278C9D1EB9B384001A6402 = {
@@ -510,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R3HARN7J9X;
 				INFOPLIST_FILE = XGPopView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoguo.DDBES.XGPopView;
@@ -521,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R3HARN7J9X;
 				INFOPLIST_FILE = XGPopView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoguo.DDBES.XGPopView;

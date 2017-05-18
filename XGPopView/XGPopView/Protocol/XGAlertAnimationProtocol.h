@@ -23,6 +23,7 @@ typedef void (^XGAnimationFinished)(BOOL isFinished);
 
 @protocol XGAlertAnimationProtocol <NSObject>
 @optional
+
 /** 显示动画 */
 - (void)showAnimationForView:(XGPopView *)view animateFinished:(XGAnimationFinished)animateFinished;
 /** 隐藏动画 */
@@ -34,13 +35,6 @@ typedef void (^XGAnimationFinished)(BOOL isFinished);
 
 /** 动画时长 */
 @property (nonatomic, assign) float duration;
-
-/** PopView背景颜色 */
-@property (nonatomic, strong) UIColor *popViewBGColor;
-
-/** Alert背景颜色 */
-@property (nonatomic, strong) UIColor *alertBGColor;
-
 
 @end
 

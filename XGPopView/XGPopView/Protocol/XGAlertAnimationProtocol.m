@@ -12,6 +12,16 @@
 #pragma mark - XGAlertAnimation
 
 @implementation XGAlertAnimation
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 /**
  * 协议
  */
