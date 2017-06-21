@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E268CAF1EDEA618002AA8EA /* XGDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E268CAE1EDEA618002AA8EA /* XGDataPickerView.m */; };
+		2E268CB31EDEA6AF002AA8EA /* NSDate+YU.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E268CB21EDEA6AF002AA8EA /* NSDate+YU.m */; };
 		2E278C8A1EB9B384001A6402 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278C891EB9B384001A6402 /* main.m */; };
 		2E278C8D1EB9B384001A6402 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278C8C1EB9B384001A6402 /* AppDelegate.m */; };
 		2E278C901EB9B384001A6402 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278C8F1EB9B384001A6402 /* ViewController.m */; };
@@ -41,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E268CAD1EDEA618002AA8EA /* XGDataPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGDataPickerView.h; sourceTree = "<group>"; };
+		2E268CAE1EDEA618002AA8EA /* XGDataPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGDataPickerView.m; sourceTree = "<group>"; };
+		2E268CB01EDEA6AF002AA8EA /* YUDateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUDateConfig.h; sourceTree = "<group>"; };
+		2E268CB11EDEA6AF002AA8EA /* NSDate+YU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YU.h"; sourceTree = "<group>"; };
+		2E268CB21EDEA6AF002AA8EA /* NSDate+YU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YU.m"; sourceTree = "<group>"; };
 		2E278C851EB9B384001A6402 /* XGPopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XGPopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E278C891EB9B384001A6402 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E278C8B1EB9B384001A6402 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,6 +131,9 @@
 				2E278C8C1EB9B384001A6402 /* AppDelegate.m */,
 				2E278C8E1EB9B384001A6402 /* ViewController.h */,
 				2E278C8F1EB9B384001A6402 /* ViewController.m */,
+				2E268CB01EDEA6AF002AA8EA /* YUDateConfig.h */,
+				2E268CB11EDEA6AF002AA8EA /* NSDate+YU.h */,
+				2E268CB21EDEA6AF002AA8EA /* NSDate+YU.m */,
 				2E278C911EB9B384001A6402 /* Main.storyboard */,
 				2E278C941EB9B384001A6402 /* Assets.xcassets */,
 				2E278C961EB9B384001A6402 /* LaunchScreen.storyboard */,
@@ -196,6 +206,8 @@
 				2E3315D71EC061CB0030CC41 /* XGTextAlertView.m */,
 				2E3315E31EC194680030CC41 /* XGTabelAlertView.h */,
 				2E3315E41EC194680030CC41 /* XGTabelAlertView.m */,
+				2E268CAD1EDEA618002AA8EA /* XGDataPickerView.h */,
+				2E268CAE1EDEA618002AA8EA /* XGDataPickerView.m */,
 			);
 			path = ShowView;
 			sourceTree = "<group>";
@@ -356,7 +368,9 @@
 				2E278C8D1EB9B384001A6402 /* AppDelegate.m in Sources */,
 				2E278C8A1EB9B384001A6402 /* main.m in Sources */,
 				2E3315D81EC061CB0030CC41 /* XGTextAlertView.m in Sources */,
+				2E268CB31EDEA6AF002AA8EA /* NSDate+YU.m in Sources */,
 				2E3315D51EC022F70030CC41 /* GraduallyShowAnimation.m in Sources */,
+				2E268CAF1EDEA618002AA8EA /* XGDataPickerView.m in Sources */,
 				2E3315E51EC194680030CC41 /* XGTabelAlertView.m in Sources */,
 				2E278CBE1EB9B7AA001A6402 /* XGPopView.m in Sources */,
 				2E3CEF971EC2FCDB0089BBD7 /* TestShowAnimation.m in Sources */,

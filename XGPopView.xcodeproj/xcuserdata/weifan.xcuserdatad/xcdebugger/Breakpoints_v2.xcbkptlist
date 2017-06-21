@@ -73,22 +73,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XGPopView/XGPopView/XGPopView.m"
-            timestampString = "516097526.340732"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "-popViewTouchAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "XGPopView/XGPopView/Animations/TestShowAnimation/TestShowAnimation.m"
             timestampString = "516097535.509585"
             startingColumnNumber = "9223372036854775807"
@@ -105,13 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XGPopView/XGPopView/Animations/GraduallyShowAnimation/GraduallyShowAnimation.m"
-            timestampString = "516097539.370272"
+            filePath = "XGPopView/XGPopView/Protocol/XGAlertAnimationProtocol.m"
+            timestampString = "518946427.200121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "-showAnimationForView:animateFinished:"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-showAnimationForView:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,13 +105,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XGPopView/XGPopView/ShowView/XGTabelAlertView.m"
-            timestampString = "516097549.316032"
+            filePath = "XGPopView/XGPopView/Protocol/XGAlertAnimationProtocol.m"
+            timestampString = "518946428.169821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "-init"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-hiddenAnimationForView:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
