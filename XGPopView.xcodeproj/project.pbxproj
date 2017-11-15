@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E268CAF1EDEA618002AA8EA /* XGDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E268CAE1EDEA618002AA8EA /* XGDataPickerView.m */; };
-		2E268CB31EDEA6AF002AA8EA /* NSDate+YU.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E268CB21EDEA6AF002AA8EA /* NSDate+YU.m */; };
+		2E04B3B01FBBD1AB00C08DCF /* PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E04B3AF1FBBD1AA00C08DCF /* PopView.m */; };
+		2E04B3B61FBBD21900C08DCF /* GraduallyShowAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E04B3B51FBBD21900C08DCF /* GraduallyShowAnimation.m */; };
+		2E04B3B91FBBD70A00C08DCF /* PopAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E04B3B71FBBD70A00C08DCF /* PopAlertView.m */; };
 		2E278C8A1EB9B384001A6402 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278C891EB9B384001A6402 /* main.m */; };
 		2E278C8D1EB9B384001A6402 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278C8C1EB9B384001A6402 /* AppDelegate.m */; };
 		2E278C901EB9B384001A6402 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278C8F1EB9B384001A6402 /* ViewController.m */; };
@@ -17,12 +18,6 @@
 		2E278C981EB9B384001A6402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E278C961EB9B384001A6402 /* LaunchScreen.storyboard */; };
 		2E278CA31EB9B384001A6402 /* XGPopViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278CA21EB9B384001A6402 /* XGPopViewTests.m */; };
 		2E278CAE1EB9B384001A6402 /* XGPopViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278CAD1EB9B384001A6402 /* XGPopViewUITests.m */; };
-		2E278CBE1EB9B7AA001A6402 /* XGPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278CBD1EB9B7AA001A6402 /* XGPopView.m */; };
-		2E278CC71EB9D017001A6402 /* XGAlertAnimationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E278CC61EB9D017001A6402 /* XGAlertAnimationProtocol.m */; };
-		2E3315D51EC022F70030CC41 /* GraduallyShowAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3315D41EC022F70030CC41 /* GraduallyShowAnimation.m */; };
-		2E3315D81EC061CB0030CC41 /* XGTextAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3315D71EC061CB0030CC41 /* XGTextAlertView.m */; };
-		2E3315E51EC194680030CC41 /* XGTabelAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3315E41EC194680030CC41 /* XGTabelAlertView.m */; };
-		2E3CEF971EC2FCDB0089BBD7 /* TestShowAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CEF961EC2FCDB0089BBD7 /* TestShowAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E268CAD1EDEA618002AA8EA /* XGDataPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGDataPickerView.h; sourceTree = "<group>"; };
-		2E268CAE1EDEA618002AA8EA /* XGDataPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGDataPickerView.m; sourceTree = "<group>"; };
-		2E268CB01EDEA6AF002AA8EA /* YUDateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUDateConfig.h; sourceTree = "<group>"; };
-		2E268CB11EDEA6AF002AA8EA /* NSDate+YU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YU.h"; sourceTree = "<group>"; };
-		2E268CB21EDEA6AF002AA8EA /* NSDate+YU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YU.m"; sourceTree = "<group>"; };
+		2E04B3AE1FBBD1AA00C08DCF /* PopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopView.h; sourceTree = "<group>"; };
+		2E04B3AF1FBBD1AA00C08DCF /* PopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopView.m; sourceTree = "<group>"; };
+		2E04B3B41FBBD21900C08DCF /* GraduallyShowAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduallyShowAnimation.h; sourceTree = "<group>"; };
+		2E04B3B51FBBD21900C08DCF /* GraduallyShowAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduallyShowAnimation.m; sourceTree = "<group>"; };
+		2E04B3B71FBBD70A00C08DCF /* PopAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAlertView.m; sourceTree = "<group>"; };
+		2E04B3B81FBBD70A00C08DCF /* PopAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAlertView.h; sourceTree = "<group>"; };
 		2E278C851EB9B384001A6402 /* XGPopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XGPopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E278C891EB9B384001A6402 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E278C8B1EB9B384001A6402 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,18 +60,6 @@
 		2E278CA91EB9B384001A6402 /* XGPopViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XGPopViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E278CAD1EB9B384001A6402 /* XGPopViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XGPopViewUITests.m; sourceTree = "<group>"; };
 		2E278CAF1EB9B384001A6402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E278CBC1EB9B7AA001A6402 /* XGPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGPopView.h; sourceTree = "<group>"; };
-		2E278CBD1EB9B7AA001A6402 /* XGPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGPopView.m; sourceTree = "<group>"; };
-		2E278CC51EB9D017001A6402 /* XGAlertAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGAlertAnimationProtocol.h; sourceTree = "<group>"; };
-		2E278CC61EB9D017001A6402 /* XGAlertAnimationProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGAlertAnimationProtocol.m; sourceTree = "<group>"; };
-		2E3315D31EC022F70030CC41 /* GraduallyShowAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduallyShowAnimation.h; sourceTree = "<group>"; };
-		2E3315D41EC022F70030CC41 /* GraduallyShowAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduallyShowAnimation.m; sourceTree = "<group>"; };
-		2E3315D61EC061CB0030CC41 /* XGTextAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGTextAlertView.h; sourceTree = "<group>"; };
-		2E3315D71EC061CB0030CC41 /* XGTextAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGTextAlertView.m; sourceTree = "<group>"; };
-		2E3315E31EC194680030CC41 /* XGTabelAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGTabelAlertView.h; sourceTree = "<group>"; };
-		2E3315E41EC194680030CC41 /* XGTabelAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGTabelAlertView.m; sourceTree = "<group>"; };
-		2E3CEF951EC2FCDB0089BBD7 /* TestShowAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestShowAnimation.h; sourceTree = "<group>"; };
-		2E3CEF961EC2FCDB0089BBD7 /* TestShowAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestShowAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E04B3BA1FBBDDA000C08DCF /* PopAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				2E04B3B81FBBD70A00C08DCF /* PopAlertView.h */,
+				2E04B3B71FBBD70A00C08DCF /* PopAlertView.m */,
+			);
+			path = PopAlertView;
+			sourceTree = "<group>";
+		};
 		2E278C7C1EB9B384001A6402 = {
 			isa = PBXGroup;
 			children = (
@@ -126,14 +119,11 @@
 		2E278C871EB9B384001A6402 /* XGPopView */ = {
 			isa = PBXGroup;
 			children = (
-				2E278CBB1EB9B3A7001A6402 /* XGPopView */,
+				2E278CBB1EB9B3A7001A6402 /* PopView */,
 				2E278C8B1EB9B384001A6402 /* AppDelegate.h */,
 				2E278C8C1EB9B384001A6402 /* AppDelegate.m */,
 				2E278C8E1EB9B384001A6402 /* ViewController.h */,
 				2E278C8F1EB9B384001A6402 /* ViewController.m */,
-				2E268CB01EDEA6AF002AA8EA /* YUDateConfig.h */,
-				2E268CB11EDEA6AF002AA8EA /* NSDate+YU.h */,
-				2E268CB21EDEA6AF002AA8EA /* NSDate+YU.m */,
 				2E278C911EB9B384001A6402 /* Main.storyboard */,
 				2E278C941EB9B384001A6402 /* Assets.xcassets */,
 				2E278C961EB9B384001A6402 /* LaunchScreen.storyboard */,
@@ -169,15 +159,15 @@
 			path = XGPopViewUITests;
 			sourceTree = "<group>";
 		};
-		2E278CBB1EB9B3A7001A6402 /* XGPopView */ = {
+		2E278CBB1EB9B3A7001A6402 /* PopView */ = {
 			isa = PBXGroup;
 			children = (
-				2E278CBC1EB9B7AA001A6402 /* XGPopView.h */,
-				2E278CBD1EB9B7AA001A6402 /* XGPopView.m */,
+				2E04B3AE1FBBD1AA00C08DCF /* PopView.h */,
+				2E04B3AF1FBBD1AA00C08DCF /* PopView.m */,
 				2E278CBF1EB9B982001A6402 /* Animations */,
-				2E278CC01EB9B982001A6402 /* Protocol */,
 				2E278CC11EB9B982001A6402 /* ShowView */,
 			);
+			name = PopView;
 			path = XGPopView;
 			sourceTree = "<group>";
 		};
@@ -185,29 +175,14 @@
 			isa = PBXGroup;
 			children = (
 				2E3315D21EC022750030CC41 /* GraduallyShowAnimation */,
-				2E3CEF941EC2FC9A0089BBD7 /* TestShowAnimation */,
 			);
 			path = Animations;
-			sourceTree = "<group>";
-		};
-		2E278CC01EB9B982001A6402 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				2E278CC51EB9D017001A6402 /* XGAlertAnimationProtocol.h */,
-				2E278CC61EB9D017001A6402 /* XGAlertAnimationProtocol.m */,
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		2E278CC11EB9B982001A6402 /* ShowView */ = {
 			isa = PBXGroup;
 			children = (
-				2E3315D61EC061CB0030CC41 /* XGTextAlertView.h */,
-				2E3315D71EC061CB0030CC41 /* XGTextAlertView.m */,
-				2E3315E31EC194680030CC41 /* XGTabelAlertView.h */,
-				2E3315E41EC194680030CC41 /* XGTabelAlertView.m */,
-				2E268CAD1EDEA618002AA8EA /* XGDataPickerView.h */,
-				2E268CAE1EDEA618002AA8EA /* XGDataPickerView.m */,
+				2E04B3BA1FBBDDA000C08DCF /* PopAlertView */,
 			);
 			path = ShowView;
 			sourceTree = "<group>";
@@ -215,19 +190,10 @@
 		2E3315D21EC022750030CC41 /* GraduallyShowAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				2E3315D31EC022F70030CC41 /* GraduallyShowAnimation.h */,
-				2E3315D41EC022F70030CC41 /* GraduallyShowAnimation.m */,
+				2E04B3B41FBBD21900C08DCF /* GraduallyShowAnimation.h */,
+				2E04B3B51FBBD21900C08DCF /* GraduallyShowAnimation.m */,
 			);
 			path = GraduallyShowAnimation;
-			sourceTree = "<group>";
-		};
-		2E3CEF941EC2FC9A0089BBD7 /* TestShowAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				2E3CEF951EC2FCDB0089BBD7 /* TestShowAnimation.h */,
-				2E3CEF961EC2FCDB0089BBD7 /* TestShowAnimation.m */,
-			);
-			path = TestShowAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,15 +332,10 @@
 			files = (
 				2E278C901EB9B384001A6402 /* ViewController.m in Sources */,
 				2E278C8D1EB9B384001A6402 /* AppDelegate.m in Sources */,
+				2E04B3B91FBBD70A00C08DCF /* PopAlertView.m in Sources */,
 				2E278C8A1EB9B384001A6402 /* main.m in Sources */,
-				2E3315D81EC061CB0030CC41 /* XGTextAlertView.m in Sources */,
-				2E268CB31EDEA6AF002AA8EA /* NSDate+YU.m in Sources */,
-				2E3315D51EC022F70030CC41 /* GraduallyShowAnimation.m in Sources */,
-				2E268CAF1EDEA618002AA8EA /* XGDataPickerView.m in Sources */,
-				2E3315E51EC194680030CC41 /* XGTabelAlertView.m in Sources */,
-				2E278CBE1EB9B7AA001A6402 /* XGPopView.m in Sources */,
-				2E3CEF971EC2FCDB0089BBD7 /* TestShowAnimation.m in Sources */,
-				2E278CC71EB9D017001A6402 /* XGAlertAnimationProtocol.m in Sources */,
+				2E04B3B01FBBD1AB00C08DCF /* PopView.m in Sources */,
+				2E04B3B61FBBD21900C08DCF /* GraduallyShowAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

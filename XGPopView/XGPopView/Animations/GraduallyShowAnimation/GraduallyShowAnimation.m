@@ -10,7 +10,7 @@
 
 @implementation GraduallyShowAnimation
 
-- (void)showAnimationForView:(XGPopView *)view animateFinished:(XGAnimationFinished)animateFinished
+- (void)showAnimationForView:(PopView *)view animateFinished:(AnimationFinished)animateFinished
 {
     NSLog(@"子动画协议实现-显示动画");
     
@@ -26,10 +26,10 @@
 
 }
 
-- (void)hiddenAnimationForView:(XGPopView *)view animateFinished:(XGAnimationFinished)animateFinished{
+- (void)hiddenAnimationForView:(PopView *)view animateFinished:(AnimationFinished)animateFinished{
     
    NSLog(@"子动画协议实现-隐藏动画");
-    
+    view.alertView.hidden = YES;
     view.alpha = 1;
     [UIView animateWithDuration:0.3f animations:^{
       view.alpha = 0;
@@ -43,7 +43,7 @@
 
 }
 
-#pragma mark - UIKit的基本动画
+#pragma mark - UIKit的基本动画(TODO:可写个动画管理类)
 
 -(void)positionAnimationForView:(UIView *)view{
     view.transform = CGAffineTransformMakeTranslation(100, 100);

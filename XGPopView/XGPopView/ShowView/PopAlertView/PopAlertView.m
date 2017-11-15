@@ -6,19 +6,22 @@
 //  Copyright © 2017年 xiaoguo. All rights reserved.
 //
 
-#import "XGTextAlertView.h"
+#import "PopAlertView.h"
 
-@implementation XGTextAlertView
+@implementation PopAlertView
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        self.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 150, [UIScreen mainScreen].bounds.size.height/2 - 150, 300, 300);
+        self.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 150, [UIScreen mainScreen].bounds.size.height/2 - 300, 300, 600);
         [self setBackgroundColor:[UIColor yellowColor]];
+        
     }
     return self;
 }
+
+
 
 
 

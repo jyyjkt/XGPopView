@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "XGPopView.h"
-#import "XGAlertAnimationProtocol.h"
+#import "PopView.h"
 
-@interface GraduallyShowAnimation : XGAlertAnimation
+#define kGraduallyShowAnimation @"GraduallyShowAnimation"
+
+@interface GraduallyShowAnimation : AlertAnimation
 
 @end

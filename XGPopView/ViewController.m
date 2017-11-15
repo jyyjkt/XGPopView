@@ -7,12 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "XGPopView.h"
+#import "PopView.h"
+#import "PopAlertView.h"
+#import "GraduallyShowAnimation.h"
 #import <objc/runtime.h>
-#import "TestShowAnimation.h"
-#import "XGTabelAlertView.h"
 
-@interface ViewController ()<XGPopVeiwDelegate>
+@interface ViewController ()<PopViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *showButton;
 - (IBAction)buttonAction:(id)sender;
@@ -36,10 +36,15 @@
 
 - (IBAction)buttonAction:(id)sender {
     
+    PopView *popView = [PopView showPopViewAddedTo:self.view animationStr:kGraduallyShowAnimation alertViewStr:kPopAlertView];
+    PopAlertView * popAlertView = (PopAlertView *)popView.alertView;
+    GraduallyShowAnimation *graduallyShowAnimation = (GraduallyShowAnimation *)popView.animation;
+    
+    
 
 }
 
-- (void)showAnimationFinishedForView:(XGPopView *)popView{
+- (void)showAnimationFinishedForView:(PopView *)popView{
    
     NSLog(@"显示动画结束--------");
 }

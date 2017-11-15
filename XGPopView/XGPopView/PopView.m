@@ -1,33 +1,46 @@
 //
-//  XGPopView.m
-//  XGPopView
+//  PopView.m
+//  GHYJ
 //
-//  Created by weifan on 2017/5/3.
+//  Created by weifan on 2017/8/7.
 //  Copyright © 2017年 xiaoguo. All rights reserved.
 //
 
-#import "XGPopView.h"
+#import "PopView.h"
 
 #define DefultAnimationStr @"GraduallyShowAnimation"
-#define DefultAlertViewStr @"XGTextAlertView"
+#define DefultAlertViewStr @"PopAlertView"
 
-@interface XGPopView ()<UIGestureRecognizerDelegate>
+@interface PopView ()<UIGestureRecognizerDelegate>{
+    NSString *_alertViewStr;
+    NSString *_animationStr;
+}
 
 @end
 
-@implementation XGPopView
+@implementation PopView
 
-+ (instancetype)showPopViewAddedTo:(UIView *)view animationStr:(NSString *)animationStr alertViewStr:(NSString *)alertViewStr
+- (void)dealloc{
+    
+}
+
++ (PopView *)showPopViewAddedTo:(UIView *)view animationStr:(NSString *)animationStr alertViewStr:(NSString *)alertViewStr
 {
-    XGPopView *popView = [[self alloc]initWithView:view animationStr:animationStr alertViewStr:alertViewStr];
+    PopView *popView = [[self alloc]initWithView:view animationStr:animationStr alertViewStr:alertViewStr];
     [view addSubview:popView];
     
     return popView;
 }
 
-+ (XGPopView *)PopViewForView:(UIView *)view{
++ (PopView *)showPopViewAddedTo:(UIView *)view alertViewStr:(NSString *)alertViewStr{
+    PopView *popView = [[self alloc]initWithView:view alertViewStr:alertViewStr];
+    [view addSubview:popView];
+    return popView;
+}
+
++ (PopView *)PopViewForView:(UIView *)view{
     
-    XGPopView *popView = [[self alloc]initWithView:view];
+    PopView *popView = [[self alloc]initWithView:view];
     [view addSubview:popView];
     
     return popView;
@@ -35,8 +48,8 @@
 
 + (BOOL)hidePopViewForView:(UIView *)view animationStr:(NSString *)animationStr
 {
-    XGPopView *popView = [self FindPopViewForView:view];
-
+    PopView *popView = [self FindPopViewForView:view];
+    
     if (popView != nil) {
         
         [popView hideAnimated];
@@ -45,12 +58,12 @@
     return NO;
 }
 
-+ (XGPopView *)FindPopViewForView:(UIView *)view
++ (PopView *)FindPopViewForView:(UIView *)view
 {
     NSEnumerator *subviewsEnumerator = [view.subviews reverseObjectEnumerator];
     for (UIView *subview in subviewsEnumerator) {
         if ([subview isKindOfClass:self]) {
-            return (XGPopView *)subview;
+            return (PopView *)subview;
         }
     }
     return nil;
@@ -61,18 +74,21 @@
 - (id)initWithView:(UIView *)view animationStr:(NSString *)animationStr alertViewStr:(NSString *)alertViewStr
 {
     NSAssert(view, @"view不能为空");
-    [self eidtWithAnimationStr:animationStr alertViewStr:animationStr];
+    [self eidtWithAnimationStr:animationStr alertViewStr:alertViewStr];
     
     return [self initWithFrame:view.bounds];
 }
 
+- (id)initWithView:(UIView *)view alertViewStr:(NSString *)alertViewStr{
+    NSAssert(view, @"view不能为空");
+    [self eidtWithAnimationStr:nil alertViewStr:alertViewStr];
+    return [self initWithFrame:view.bounds];
+    
+}
+
 - (id)initWithView:(UIView *)view{
     NSAssert(view, @"view不能为空");
-    
-    _animation = [[NSClassFromString(DefultAnimationStr) class]new];
-    _alertView = [[NSClassFromString(DefultAlertViewStr) class]new];
-
-    
+    [self eidtWithAnimationStr:nil alertViewStr:nil];
     return [self initWithFrame:view.bounds];
 }
 
@@ -90,15 +106,15 @@
     return self;
 }
 
-- (void)dealloc{
-    
-}
-
 #pragma mark - 初始化属性 和 编辑UI
 - (void)eidtWithAnimationStr:(NSString *)animationStr alertViewStr:(NSString *)alertViewStr{
     
-    if (animationStr.length > 0
-        && [[NSClassFromString(animationStr) class] isKindOfClass:[XGAlertAnimation class]]) {
+    _alertViewStr = alertViewStr;
+    _animationStr = animationStr;
+    
+    if ((animationStr.length > 0
+         && [[NSClassFromString(animationStr) class] isSubclassOfClass:[AlertAnimation class]])
+        || (animationStr.length > 0 &&[[NSClassFromString(animationStr) class] isKindOfClass:[AlertAnimation class]])) {
         
         _animation = [[NSClassFromString(animationStr) class] new];
     }else{
@@ -106,8 +122,9 @@
         _animation = [[NSClassFromString(DefultAnimationStr) class]new];
     }
     
-    if (alertViewStr.length > 0
-        && [[NSClassFromString(alertViewStr) class] isKindOfClass:[XGAlertView class]]) {
+    if ((alertViewStr.length > 0
+         && [[NSClassFromString(alertViewStr) class] isSubclassOfClass:[AlertView class]])
+        || (alertViewStr.length > 0 &&[[NSClassFromString(alertViewStr) class] isKindOfClass:[AlertView class]])) {
         
         _alertView = [[NSClassFromString(alertViewStr) class] new];
     }else{
@@ -118,9 +135,12 @@
 
 - (void)commonInit{
     
+    self.isBackReturn = YES;
+    
     if (_alertView != nil) {
         [self addSubview:_alertView];
     }
+
     
     UITapGestureRecognizer *popViewTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(popViewTouchAction:)];
     [self addGestureRecognizer:popViewTap];
@@ -131,7 +151,7 @@
 }
 
 #pragma mark - Show & Hidden
-     
+
 - (void)showAnimated{
     
     if (self.animation != nil && self != nil) {
@@ -172,14 +192,15 @@
 
 #pragma mark - 属性
 
-- (void)setAnimation:(XGAlertAnimation *)animation{
+- (void)setAnimation:(AlertAnimation *)animation{
     
     _animation = animation;
     
 }
 
-- (void)setAlertView:(XGAlertView *)alertView{
+- (void)setAlertView:(AlertView *)alertView{
     
+    _alertView = alertView;
 }
 
 #pragma mark - Delegate
@@ -189,20 +210,80 @@
  */
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     
+    AlertView * alertView = _alertView;
+    for (UIView *view in alertView.subviews) {
+        if ([view isEqual:touch.view]) {
+            return NO;
+        }
+    }
+
     /* 将子视图的tap手势屏蔽 */
-    if ([[touch.view class] isSubclassOfClass:[XGAlertView class]]) {
+    if ([[touch.view class] isSubclassOfClass:[AlertView class]]) {
         return NO;
     }
     
     return YES;
-
+    
 }
 
 #pragma mark - 点击实现
 - (void)popViewTouchAction:(UITapGestureRecognizer *)sender{
-    
-    [self hideAnimated];
+    //点击alterview视图不取消视图
+    CGPoint point = [sender locationInView:_alertView];
+    BOOL isContain =   CGRectContainsPoint(_alertView.bounds, point);
+    if (isContain) {
+        return;
+    }
+    if (self.isBackReturn) {
+        [self hideAnimated];
+    }else{
+        
+    }
 }
 
+@end
+
+
+#pragma mark - AlertAnimation
+
+@implementation AlertAnimation
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+/**
+ * 协议
+ */
+- (void)showAnimationForView:(UIView *)view{
+    
+    NSLog(@"父类实现-显示动画");
+    
+}
+
+- (void)hiddenAnimationForView:(UIView *)view{
+    
+    NSLog(@"父类实现-隐藏动画");
+}
+
+@end
+
+#pragma mark - AlertView
+
+@implementation AlertView
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setBackgroundColor:[UIColor whiteColor]];
+    }
+    return self;
+}
 
 @end
