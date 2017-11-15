@@ -489,7 +489,7 @@
 				DEVELOPMENT_TEAM = R3HARN7J9X;
 				INFOPLIST_FILE = XGPopView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoguo.DDBES.XGPopView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoguo.XGPopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -501,7 +501,7 @@
 				DEVELOPMENT_TEAM = R3HARN7J9X;
 				INFOPLIST_FILE = XGPopView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoguo.DDBES.XGPopView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoguo.XGPopView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

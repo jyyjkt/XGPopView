@@ -11,7 +11,7 @@
 #define DefultAnimationStr @"GraduallyShowAnimation"
 #define DefultAlertViewStr @"PopAlertView"
 
-@interface PopView ()<UIGestureRecognizerDelegate>{
+@interface PopView (){
     NSString *_alertViewStr;
     NSString *_animationStr;
 }
@@ -140,14 +140,8 @@
     if (_alertView != nil) {
         [self addSubview:_alertView];
     }
-
     
-    UITapGestureRecognizer *popViewTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(popViewTouchAction:)];
-    [self addGestureRecognizer:popViewTap];
-    popViewTap.delegate = self;
-    
-    
-    self.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.3];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.3 alpha:0.3]];
 }
 
 #pragma mark - Show & Hidden
@@ -203,29 +197,46 @@
     _alertView = alertView;
 }
 
-#pragma mark - Delegate
-
-/**
- *  UIGestureRecognizerDelegate
- */
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+#pragma mark - touchesBegan
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    AlertView * alertView = _alertView;
-    for (UIView *view in alertView.subviews) {
-        if ([view isEqual:touch.view]) {
-            return NO;
+    for (UITouch *touch in touches) {
+        if ([[touch.view class] isSubclassOfClass:[PopView class]]) {
+            CGPoint point = [touch locationInView:_alertView];
+            BOOL isContain = CGRectContainsPoint(_alertView.bounds, point);
+            if (isContain) {
+                return;
+            }
+            if (self.isBackReturn) {
+                [self hideAnimated];
+            }else{
+                
+            }
         }
-    }
-
-    /* 将子视图的tap手势屏蔽 */
-    if ([[touch.view class] isSubclassOfClass:[AlertView class]]) {
-        return NO;
+        
     }
     
-    return YES;
     
 }
 
+///**
+// *  UIGestureRecognizerDelegate
+// */
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+//
+//    /* 将子视图的tap手势屏蔽 */
+//    if ([[touch.view class] isSubclassOfClass:[AlertView class]]) {
+//        return NO;
+//    }
+//
+//    if ([[touch.view class] isSubclassOfClass:[UITableView class]]) {
+//        return NO;
+//    }
+//
+//    return YES;
+//
+//}
+//
 #pragma mark - 点击实现
 - (void)popViewTouchAction:(UITapGestureRecognizer *)sender{
     //点击alterview视图不取消视图
@@ -237,7 +248,7 @@
     if (self.isBackReturn) {
         [self hideAnimated];
     }else{
-        
+
     }
 }
 

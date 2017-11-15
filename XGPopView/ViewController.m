@@ -37,10 +37,10 @@
 - (IBAction)buttonAction:(id)sender {
     
     PopView *popView = [PopView showPopViewAddedTo:self.view animationStr:kGraduallyShowAnimation alertViewStr:kPopAlertView];
+    popView.delegate = self;
     PopAlertView * popAlertView = (PopAlertView *)popView.alertView;
     GraduallyShowAnimation *graduallyShowAnimation = (GraduallyShowAnimation *)popView.animation;
-    
-    
+    popView.isBackReturn = YES;
 
 }
 
