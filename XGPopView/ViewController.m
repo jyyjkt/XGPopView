@@ -36,12 +36,7 @@
 
 - (IBAction)buttonAction:(id)sender {
     
-    XGPopView * popView = [XGPopView showPopViewAddedTo:self.view animationStr:@"GraduallyShowAnimation" alertViewStr:@"XGTextAlertView"];
-    popView.delegate = self;
-    popView.animation = [TestShowAnimation new];
-    popView.alertView = [XGTabelAlertView new];
-    [popView showAnimated];
-    
+
 }
 
 - (void)showAnimationFinishedForView:(XGPopView *)popView{
