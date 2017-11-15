@@ -27,7 +27,7 @@
 /**
  隐藏动画结束方法
  */
-- (void)hiddenAnimationFinshed;
+- (void)hiddenAnimationFinshedForView:(PopView *)popView;;
 
 @end
 
@@ -147,7 +147,7 @@ typedef void (^AnimationFinished)(BOOL isFinished);
 @end
 
 #pragma mark - 提示View
-@interface AlertView : UIView
+@interface AlertView : UIView<AlertViewProtocol>
 
 
 @end

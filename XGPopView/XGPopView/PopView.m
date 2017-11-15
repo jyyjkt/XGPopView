@@ -173,9 +173,9 @@
         [self.animation hiddenAnimationForView:self animateFinished:^(BOOL isFinished) {
             
             if (weakSelf.delegate
-                && [weakSelf.delegate respondsToSelector:@selector(hiddenAnimationFinshed)]
+                && [weakSelf.delegate respondsToSelector:@selector(hiddenAnimationFinshedForView:)]
                 && isFinished) {
-                [weakSelf.delegate hiddenAnimationFinshed];
+                [weakSelf.delegate hiddenAnimationFinshedForView:self];
             }
             
         }];
@@ -219,24 +219,7 @@
     
 }
 
-///**
-// *  UIGestureRecognizerDelegate
-// */
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
-//
-//    /* 将子视图的tap手势屏蔽 */
-//    if ([[touch.view class] isSubclassOfClass:[AlertView class]]) {
-//        return NO;
-//    }
-//
-//    if ([[touch.view class] isSubclassOfClass:[UITableView class]]) {
-//        return NO;
-//    }
-//
-//    return YES;
-//
-//}
-//
+
 #pragma mark - 点击实现
 - (void)popViewTouchAction:(UITapGestureRecognizer *)sender{
     //点击alterview视图不取消视图
@@ -271,13 +254,13 @@
 /**
  * 协议
  */
-- (void)showAnimationForView:(UIView *)view{
+- (void)showAnimationForView:(PopView *)view animateFinished:(AnimationFinished)animateFinished{
     
     NSLog(@"父类实现-显示动画");
     
 }
 
-- (void)hiddenAnimationForView:(UIView *)view{
+- (void)hiddenAnimationForView:(PopView *)view animateFinished:(AnimationFinished)animateFinished{
     
     NSLog(@"父类实现-隐藏动画");
 }
@@ -296,5 +279,17 @@
     }
     return self;
 }
+
+/**
+ * 协议
+ */
+- (void)showAnimationForView:(AlertView *)view{
+     NSLog(@"父类实现显示");
+}
+
+- (void)hiddenAnimationForView:(AlertView *)view{
+     NSLog(@"父类实现隐藏");
+}
+
 
 @end
