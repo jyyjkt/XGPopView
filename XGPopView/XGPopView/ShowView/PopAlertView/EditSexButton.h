@@ -25,8 +25,8 @@
 
 @property (strong, nonatomic) UILabel *titleLabel;
 
-@property (assign, nonatomic) BOOL isSelect;
+@property (weak, nonatomic) BOOL isSelect;
 
-@property (assign, nonatomic) id<SexButtonDelegate> delegate;
+@property (weak, nonatomic) id<SexButtonDelegate> delegate;
 
 @end

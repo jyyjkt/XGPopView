@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, EditSexViewType) {
 @interface EditSexView : AlertView
 
 
-@property (nonatomic, assign) id<EditSexViewDelegate>delegate;
+@property (nonatomic, weak) id<EditSexViewDelegate>delegate;
 
 @property (nonatomic, copy) NSString *histroySex;
 

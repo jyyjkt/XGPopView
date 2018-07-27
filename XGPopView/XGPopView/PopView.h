@@ -106,7 +106,7 @@
 /** 提示View */
 @property (strong, nonatomic)AlertView *alertView;
 /** 代理 */
-@property (assign, nonatomic) id<PopViewDelegate> delegate;
+@property (weak, nonatomic) id<PopViewDelegate> delegate;
 /** 是否点击背景隐藏 */
 @property (assign, nonatomic)BOOL isBackReturn;
 

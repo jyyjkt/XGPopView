@@ -20,6 +20,6 @@
 
 @interface PopAlertView : AlertView
 
-@property (assign, nonatomic) id<PopAlertViewDelegate> delegate;
+@property (weak, nonatomic) id<PopAlertViewDelegate> delegate;
 
 @end
